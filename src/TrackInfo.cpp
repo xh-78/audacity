@@ -78,7 +78,7 @@ struct Settings : PrefsListener {
          window->GetTextExtent(_("Stereo, 999999Hz"),
             &textWidth, nullptr, nullptr, nullptr, &gFont);
          fontSize--;
-      } while (textWidth >= allowableWidth);
+      } while (textWidth >= allowableWidth && fontSize > 0);
 
       mInitialized = true;
    }
